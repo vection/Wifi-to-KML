@@ -13,8 +13,6 @@ import de.micromata.opengis.kml.v_2_2_0.Kml;
 import java.util.Date;
 import java.util.TimeZone;
 ;
-	
-
 /**
  * This class represents CSV writing.
  * @author Aviv
@@ -24,8 +22,8 @@ public class ToCSV
 {	
 	/**
 	 * CreateData gets string array and throwing Arraylist on Data object.
-	 * @param details
-	 * @return
+	 * @param details - represent string array with information.
+	 * @return Arraylist of type "Data".
 	 */
 	public static ArrayList<Data> CreateData(String[] details) {
 		ArrayList<Data> elements = new ArrayList<>();
@@ -49,7 +47,7 @@ public class ToCSV
 	}
 	/**
 	 * CreateCSV gets Arraylist of Data object and creates CSV file with the requested format.
-	 * @param elements
+	 * @param elements - Arraylist with all objects
 	 */
 	public static void CreateCSV(ArrayList<Data> elements) {
 		
@@ -83,7 +81,7 @@ public class ToCSV
 		          csvOutput.write(elements.get(i).getTime().toString());
 		          csvOutput.write("");
 		          csvOutput.write(elements.get(i).getLat());
-		          csvOutput.write(elements.get(i).getAlt());
+		          csvOutput.write(elements.get(i).getLon());
 		          csvOutput.write("");
 		          csvOutput.write(elements.get(i).getSSID());
 		          csvOutput.write(elements.get(i).getMAC());
@@ -103,8 +101,8 @@ public class ToCSV
 	}
 	/**
 	 * Sortby gets ArrayList of object Data, sort it by signal and create KML file with the 10 highest signal valuse.
-	 * @param elements
-	 * @return
+	 * @param elements which represents the arraylist of data.
+	 * @return array of integers with the 10 highest valuse.
 	 */
 	public static int[] sortBy(ArrayList<Data> elements)
 	{
