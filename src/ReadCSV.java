@@ -18,14 +18,11 @@ import java.util.Date;
  *
  */
 public class ReadCSV {	
-	public static void main(String[] args) 
-	{
-	}
 	/**
 	 * ReadFromCSV - gets "getfile" string (file location) and writing all data sorted by colums to array.
 	 * for example - details[3] would be all "SSID" column in one string.
 	 * @param getfile
-	 * @return
+	 * @return String array.
 	 */
 	public static String[] ReadFromCSV(String getfile) {
 		String[] details = new String[9];
@@ -56,7 +53,7 @@ public class ReadCSV {
 	 * This function throws string which represents ID of the phone the record has been taken.
 	 * gets "getfile" string. (file location)
 	 * @param getfile
-	 * @return
+	 * @return String represents ID of the device.
 	 */
 	public static String GetID(String getfile) {
 		String str = "";
@@ -69,7 +66,7 @@ public class ReadCSV {
 		     {
 		    	 str =  products.get("RSSI");
 		    	 if(str.contains("="))
-		    	        str=str.substring(str.indexOf("="), str.length());
+		    	        str=str.substring(str.indexOf("=")+1, str.length());
 		     }
 		}
 		catch (IOException e) 
