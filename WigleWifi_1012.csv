@@ -1,0 +1,5 @@
+MAC,SSID,AuthMode,FirstSeen,Channel,RSSI,CurrentLatitude,CurrentLongitude,AltitudeMeters,AccuracyMeters,Type
+e8:94:f6:87:a8:32,vilensky,[WPA-PSK-CCMP][WPA2-PSK-CCMP][WPS][ESS],10/12/2017 18:37,44,-90,31.89742016,34.81647415,103,9,WIFI
+14:ae:db:52:41:85,riva,[WPA2-PSK-CCMP][ESS],10/12/2017 18:37,11,-90,31.89742016,34.81647415,103,9,WIFI
+78:32:1b:07:7c:2c,DAP-1325,[WPA2-PSK-CCMP][ESS][BLE],10/12/2017 18:37,9,-93,31.89742016,34.81647415,103,9,WIFI
+WigleWifi-1.4,appRelease=2.26,model=SM-G900F,release=6.0.1,device=klte,display=MMB29M.G900FXXU1CPI8,board=MSM8974,brand=samsung,,,
