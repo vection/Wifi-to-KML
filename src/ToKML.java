@@ -27,7 +27,7 @@ public class ToKML {
 				  .withName(elements.get(i).getSSID())
 		           .withOpen(true);
 		   wifi.withDescription("Time: "+elements.get(i).getTime().toString()+"\n Wifi: "+elements.get(i).getSSID()+"\n Signal: "+elements.get(i).getSignal()+"\n MAC: "+elements.get(i).getMAC()+"\n Frequency: "+elements.get(i).getFrequency())
-		      .createAndSetPoint().addToCoordinates(Double.parseDouble(elements.get(i).getLon()), Double.parseDouble(elements.get(i).getLat()));
+		      .createAndSetPoint().addToCoordinates(Double.parseDouble(elements.get(i).getLon()), Double.parseDouble(elements.get(i).getLat()), Double.parseDouble(elements.get(i).getAlt()));
 		
 		   wifi.createAndSetTimeStamp().withWhen(elements.get(i).getTime().toString());// Adding here timestamp to the timeline view.
 		}
@@ -56,7 +56,7 @@ public class ToKML {
 				 document.createAndAddPlacemark()
 				   .withName(elements.get(i).getSSID())
 				   .withDescription("Time: "+elements.get(i).getTime().toString()+"\n Wifi: "+elements.get(i).getSSID()+"\n Signal: "+elements.get(i).getSignal()+"\n MAC: "+elements.get(i).getMAC()+"\n Frequency: "+elements.get(i).getFrequency())
-				   .createAndSetPoint().addToCoordinates(Double.parseDouble(elements.get(i).getLon()), Double.parseDouble(elements.get(i).getLat()));
+				   .createAndSetPoint().addToCoordinates(Double.parseDouble(elements.get(i).getLon()), Double.parseDouble(elements.get(i).getLat()), Double.parseDouble(elements.get(i).getAlt()));
 		      count++;
 		      i=1;
 			}

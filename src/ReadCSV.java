@@ -24,22 +24,23 @@ public class ReadCSV {
 	 * @param getfile
 	 * @return String array.
 	 */
+
 	public static String[] ReadFromCSV(String getfile) {
 		String[] details = new String[9];
 		try {
 		     CsvReader products = new CsvReader(getfile); // Path to second CSV file.
-
 		     products.readHeaders(); // reading now all details from the csv.
 		   
 		     while (products.readRecord())
 		     {
-			      details[0] += " " + products.get("Unix time");
-			      details[1] += " " + products.get("BSSID");
-			      details[2] += " " + products.get("Signal strength(-dBm)");
-			      details[3] += " " + products.get("SSID");
-			      details[4] += " " + products.get("Longitude");
-			      details[5] += " " + products.get("Latitude");
-			      details[6] += " " + products.get("Frequency");
+			   details[0] += " "+products.get("FirstSeen");
+			      details[1] += " "+products.get("MAC"); 
+			      details[2] += " "+products.get("RSSI");
+			      details[3] += " "+products.get("SSID");
+			      details[4] += " "+products.get("CurrentLongitude");
+			      details[5] += " "+products.get("CurrentLatitude");
+			      details[6] += " "+products.get("Channel");
+			      details[7] += " "+products.get("AltitudeMeters");
 		     }
 		       products.close();
 		}
@@ -73,6 +74,7 @@ public class ReadCSV {
 		{
 			 e.printStackTrace();
 		}
-		return str;
+		return "Device ID: "+str;
 	}
+	
 }
