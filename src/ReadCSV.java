@@ -36,7 +36,7 @@ public class ReadCSV {
 			   details[0] += " "+products.get("FirstSeen");
 			      details[1] += " "+products.get("MAC"); 
 			      details[2] += " "+products.get("RSSI");
-			      details[3] += " "+products.get("SSID");
+			      details[3] += " "+products.get("SSID").replaceAll("\\s+","");
 			      details[4] += " "+products.get("CurrentLongitude");
 			      details[5] += " "+products.get("CurrentLatitude");
 			      details[6] += " "+products.get("Channel");
