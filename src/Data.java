@@ -6,7 +6,7 @@ import java.util.Date;
  *
  */
 public class Data {
-	String SSID, MAC, Signal;
+	String SSID, MAC, Signal, ID;
 	String Lat, Lon, Alt,Frequency;
 	Date Time;
 	Point3D point;
@@ -21,7 +21,7 @@ public class Data {
 	 * @param Signal - signal of wifi.
 	 * @param Frequency - channel.
 	 */
-	public Data(String SSID, Date Time, String Lon, String Lat, String Alt, String MAC, String Signal, String Frequency) {
+	public Data(String SSID, Date Time, String Lon, String Lat, String Alt, String MAC, String Signal, String Frequency, String ID) {
 		this.SSID = SSID;
 		this.Time = Time;
 		this.Lat = Lat;
@@ -29,6 +29,7 @@ public class Data {
 		this.Alt = Alt;
 		this.MAC = MAC;
 		this.Signal = Signal;
+		this.ID = ID;
 		this.Frequency = Frequency;
 	}
 
@@ -145,5 +146,8 @@ public class Data {
 	}
 	public void setAlt(double p) {
 		this.Alt = Double.toString(p);
+	}
+	public String GetID() {
+		return this.ID;
 	}
 }

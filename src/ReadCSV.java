@@ -41,6 +41,7 @@ public class ReadCSV {
 			      details[5] += " "+products.get("CurrentLatitude");
 			      details[6] += " "+products.get("Channel");
 			      details[7] += " "+products.get("AltitudeMeters");
+			      details[8] = ReadCSV.GetID(getfile);
 		     }
 		       products.close();
 		}

@@ -42,6 +42,7 @@ public class ToCSV
 	    sp5 = details[5].split(" ");
 	    sp6 = details[6].split(" ");
 	    sp7 = details[7].split(" ");
+	    String ID = details[8];
 	    int d = 1;
 	    for(int i=1; i<sp1.length-1; i++) // splitting the whole string and writing the details in specific order.
         {
@@ -50,7 +51,7 @@ public class ToCSV
 	    	//System.out.println(time1);
 	    	time = SetDate(time1);
 	    	//System.out.println(time.toString());
-	      	Data p = new Data(sp3[i], time, sp4[i], sp5[i], sp7[i], sp1[i], sp2[i], sp6[i]);
+	      	Data p = new Data(sp3[i], time, sp4[i], sp5[i], sp7[i], sp1[i], sp2[i], sp6[i], ID);
 	 	    elements.add(p);
         }
 	    return elements;
@@ -59,11 +60,10 @@ public class ToCSV
 	 * CreateCSV gets Arraylist of Data object and creates CSV file with the requested format.
 	 * @param elements - Arraylist with all objects
 	 */
-	public static void CreateCSV(ArrayList<Data> elements, String path) {
-		
-		String IDfile = "C:/Users/Aviv/Desktop/Bdida/WigleWifi_20171031183939.csv"; // represents wiggle log
-		boolean alreadyExists = new File(path).exists();
-		File file = new File(path);
+	public static void CreateCSV(ArrayList<Data> elements , String name) {
+		//boolean alreadyExists = new File(path).exists();
+		File file = new File(name+".csv");
+	    String path = file.getAbsolutePath();
 		file.delete(); // Delete exist file
 		try 
 		  {
@@ -79,7 +79,7 @@ public class ToCSV
 			csvOutput.write("Signal");
 			csvOutput.endRecord();
 			csvOutput.write("");
-			csvOutput.write(ReadCSV.GetID(IDfile));
+			csvOutput.write(elements.get(1).GetID());
 			csvOutput.endRecord();
 		    for(int i=1; i<elements.size(); i++) // splitting the whole string and writing the details in specific order.
 		    {
@@ -166,6 +166,7 @@ public class ToCSV
  		    	elements.remove(id);
 		    }
 		}
+		System.out.println(asorted.size());
 		return asorted;
 	}
 	/**
@@ -182,8 +183,7 @@ public class ToCSV
 			    for(int j =0; j<elements.size(); j++) {
 				    if(Double.parseDouble(elements.get(j).getAlt()) == arr[i]) {
 					   temp.add(elements.get(j));
-					   elements.remove(elements.get(i));
-					   break;
+					  elements.remove(elements.get(j));
 				    }
 			    }
 		    }
@@ -193,7 +193,7 @@ public class ToCSV
 			    for(int j =0; j<elements.size(); j++) {
 				    if(Double.parseDouble(elements.get(j).getSignal()) == arr[i]) {
 					   temp.add(elements.get(j));
-					   break;
+					  elements.remove(elements.get(j));
 				    }
 			    }
 		    }
@@ -203,7 +203,7 @@ public class ToCSV
 			    for(int j =0; j<elements.size(); j++) {
 				    if(Double.parseDouble(elements.get(j).getLat()) == arr[i]) {
 					   temp.add(elements.get(j));
-					   break;
+					   elements.remove(elements.get(j));
 				    }
 			    }
 		    }
@@ -213,7 +213,7 @@ public class ToCSV
 			    for(int j =0; j<elements.size(); j++) {
 				    if(Double.parseDouble(elements.get(j).getLon()) == arr[i]) {
 					   temp.add(elements.get(j));
-					   break;
+					   elements.remove(elements.get(j));
 				    }
 			    }
 		    }
@@ -246,7 +246,7 @@ public class ToCSV
 	 * @param details - String array represents data.
 	 * @param path - path to new file.
 	 */
-	public static void AddData(ArrayList<Data> elements, String[] details, String path) {
+	public static void AddData(ArrayList<Data> elements, String[] details) {
 		Date time = new Date();
 		String[] sp,sp1,sp2,sp3,sp4,sp5,sp6,sp7;
 	 	sp = details[0].split(" ");
@@ -257,36 +257,32 @@ public class ToCSV
 	    sp5 = details[5].split(" ");
 	    sp6 = details[6].split(" ");
 	    sp7 = details[7].split(" ");
+	    String ID = details[8];
 	    int d = 1;
 	    for(int i=1; i<sp1.length-1; i++) // splitting the whole string and writing the details in specific order.
         {
 	    	//time = SetDate(sp[i]);
 	    	String time1 = (sp[d++]+" "+sp[d++]);
 	    	time = SetDate(time1);
-	      	Data p = new Data(sp3[i], time, sp4[i], sp5[i], sp7[i], sp1[i], sp2[i], sp6[i]);
+	      	Data p = new Data(sp3[i], time, sp4[i], sp5[i], sp7[i], sp1[i], sp2[i], sp6[i], ID);
 	 	    elements.add(p);
         }
-	    ToCSV.CreateCSV(elements, path);
+	    ToCSV.CreateCSV(elements, "Wifi log");
 	}
 	/**
 	 * Create Weight CSV file - Algo1.
 	 * @param elements
 	 * @param path
 	 */
-     public static void CreateWCenterCSV(ArrayList<Data> elements, String path) {
+     public static void CreateWCenterCSV(ArrayList<Data> elements) {
 		
 		 // Path to output CSV file.
-		String IDfile = "C:/Users/Aviv/Desktop/Bdida/WigleWifi_20171031183939.csv"; // wiggle log required.
 		Point3DWeight wpoint;
-		boolean alreadyExists = new File(path).exists();
-		File file = new File(path);
-		if(alreadyExists)
-		{
-		   file.delete(); // Delete exist file
-		}
+		File file = new File("WCenter.csv");
+		String path = file.getAbsolutePath();
 		try 
 		  {
-			CsvWriter csvOutput = new CsvWriter(new FileWriter(path, true), ',');
+			CsvWriter csvOutput = new CsvWriter(new FileWriter(file, true), ',');
 			csvOutput.write("Time");
 			csvOutput.write("Device ID");
 			csvOutput.write("WCenter Lat");
@@ -298,7 +294,7 @@ public class ToCSV
 			csvOutput.write("Signal");
 			csvOutput.endRecord();
 			csvOutput.write("");
-			csvOutput.write(ReadCSV.GetID(IDfile));
+			csvOutput.write(elements.get(1).GetID());
 			csvOutput.endRecord();
 		    for(int i=1; i<elements.size(); i++) // splitting the whole string and writing the details in specific order.
 		    {
@@ -334,14 +330,12 @@ public class ToCSV
       * @param date
       */
      public static void CreateSortedCSV(ArrayList<Data> elements, ArrayList<Date> date) {
-    	 String outputFile = "C:/Users/Aviv/Desktop/Bdida/TimeFilteredLog.csv"; // Path to output CSV file.
-    	 String IDfile = "C:/Users/Aviv/Desktop/Bdida/WigleWifi_20171031183939.csv";
- 		boolean alreadyExists = new File(outputFile).exists();
- 		File file = new File(outputFile);
- 		file.delete(); // Delete exist file
+ 
+ 		File file = new File("TimeFilteredLog.csv");
+ 		String path = file.getAbsolutePath();
  		try 
  		  {
- 			CsvWriter csvOutput = new CsvWriter(new FileWriter(outputFile, true), ',');
+ 			CsvWriter csvOutput = new CsvWriter(new FileWriter(file, true), ',');
  			csvOutput.write("Time");
  			csvOutput.write("ID");
  			csvOutput.write("Lat");
@@ -353,7 +347,6 @@ public class ToCSV
  			csvOutput.write("Signal");
  			csvOutput.endRecord();
  			csvOutput.write("");
- 			csvOutput.write(ReadCSV.GetID(IDfile));
  			csvOutput.endRecord();
  		    for(int i=0; i<date.size(); i++) // splitting the whole string and writing the details in specific order.
  		    {
@@ -375,7 +368,7 @@ public class ToCSV
  		    }
  		    
  		    csvOutput.close();
- 		    System.out.println("Time filtered CSV file created here -  "+outputFile);
+ 		    System.out.println("Time filtered CSV file created here -  "+path);
  		  }
  		  catch (IOException e) 
  			{

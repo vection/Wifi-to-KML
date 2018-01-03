@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 /**
@@ -52,9 +53,11 @@ public class Algo2 {
 	 * @param elements
 	 * @param path represents file path
 	 */
-	public static void Algo2(ArrayList<Data> elements, String path) {
+	public static void Algo2(ArrayList<Data> elements) {
 		ArrayList<Data> p = new ArrayList<>();
 		Point3D point;
+		File file = new File("Algo2.csv");
+		String path = file.getAbsolutePath();
 		for(int i=0; i<elements.size(); i++) {
 			Data curr = elements.get(i);
 		        p = FindMost(elements, curr.getMAC());
