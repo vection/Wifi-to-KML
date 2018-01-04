@@ -1,10 +1,12 @@
 
 import java.util.ArrayList;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import de.micromata.opengis.kml.v_2_2_0.Point;
 
 /**
- * Class represents "Calculate" - which helping to figure Algorithm 1.
+ * Class represents "Calculate" - which helping to figure Algorithm 1 & one function of statistics.
  * @author Aviv
  *
  */
@@ -75,5 +77,18 @@ public class Cal {
 	    double sig = Math.abs(Signal);
 	    double temp = Math.pow(sig, 2.0);
 	    return temp;
+	  }
+	  /**
+	   * Wifi number - represents how many wifi address we have.
+	   * @param elements
+	   * @return number of wifi's
+	   */
+	  
+	  public static int Wifinumber(ArrayList<Data> elements) {
+		  SortedSet s=new TreeSet();
+		  for(int i=0; i<elements.size(); i++) {
+			  s.add(elements.get(i).toString());
+		  }
+		  return s.size();
 	  }
 }

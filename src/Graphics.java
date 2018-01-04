@@ -1,5 +1,4 @@
-import java.awt.BorderLayout;
-import java.awt.Container;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -7,32 +6,40 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-import com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.Elements;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
-import java.awt.FlowLayout;
-import javax.swing.SpringLayout;
-import javax.swing.JTextPane;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import javax.swing.JLabel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
-
+/**
+ * Graphic class - Graphical view of the program.
+ * @author Aviv
+ *
+ */
 public class Graphics extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	ArrayList<Data> melements = new ArrayList<>();
+	static ArrayList<Data> melements = new ArrayList<>();
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_4;
+	private JTextField textField_3;
+	private JTextField textField_5;
+	private static Path Datapath;
 
 	/**
 	 * Launch the application.
@@ -44,7 +51,7 @@ public class Graphics extends JFrame {
 					Graphics frame = new Graphics();
 					frame.setVisible(true);
 				} catch (Exception e) {
-					e.printStackTrace();
+					System.out.println("Database is not up correctly.");
 				}
 			}
 		});
@@ -55,12 +62,39 @@ public class Graphics extends JFrame {
 	 */
 	public Graphics() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(200, 200, 550, 350);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		textField = new JTextField();
 		textField.setColumns(10);
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_4 = new JTextField(); // Minimum
+		textField_4.setColumns(10);
+		
+		textField_3 = new JTextField(); // Maximum
+		textField_3.setColumns(10);
+		File file = new File("Database.csv");
+		String path = file.getAbsolutePath();
+		 Datapath = Paths.get(path);
+		if(file.exists()) {
+	           System.out.println("Database: "+path);
+	           String[] details;
+	           ArrayList<Data> elements = new ArrayList<>();
+	           try {
+	        	   details = Database.ReadFromData(path);
+	        	   melements = Database.CreateData(details);
+	        	   String s = Integer.toString((Cal.Wifinumber(melements)));
+			         textField_1.setText(s);
+			         textField_2.setText(Integer.toString(melements.size()));
+	           }
+	           catch(Exception e) {
+	        	   System.out.println("Error with loading database.");
+	           }
+		}
 		JButton btnChooseWiggle = new JButton("Choose wiggle");
 		btnChooseWiggle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -76,6 +110,22 @@ public class Graphics extends JFrame {
 			      } else {
 			        
 			      }
+			    try {
+			       ArrayList<Data> e = new ArrayList<>();
+			    	String[] details;
+			       details = ReadCSV.ReadFromCSV(chooser.getSelectedFile().toString());
+			       e = ToCSV.CreateData(details);
+			       for(int i=0; i<e.size(); i++) {
+			    	   melements.add(e.get(i));
+			       }
+			       Database.CreateDatabase(melements);
+			       String s = Integer.toString((Cal.Wifinumber(melements)));
+			         textField_1.setText(s);
+			         textField_2.setText(Integer.toString(melements.size()));
+			    }
+			    catch (Exception e) {
+			    	System.out.println("Database still not updated.");
+			    }
 				
 			}
 		});
@@ -83,16 +133,16 @@ public class Graphics extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String path = textField.getText();
-				if(path != null) {
-					ArrayList<Data> elements = new ArrayList<>();
-					String[] details;
-					details = ReadCSV.ReadFromCSV(path);
-					elements = ToCSV.CreateData(details);
-					ToCSV.CreateCSV(elements, "Wifi log");
-					for(int i=0; i<elements.size(); i++) {
-						melements.add(elements.get(i));
+				if(melements.size() == 0) {
+		                 System.out.println("There is no elements in database.");
+					     
 					}
-				}
+					else {
+						ToCSV.CreateCSV(melements, "Wifi log");
+						String s = Integer.toString((Cal.Wifinumber(melements)));
+					     textField_1.setText(s);
+					     textField_2.setText(Integer.toString(melements.size()));
+					}
 			}
 		});
 		
@@ -100,15 +150,11 @@ public class Graphics extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String path = textField.getText();
-				if(path != null) {
-				      ArrayList<Data> elements = new ArrayList<>();
-				      String[] details;
-				      details = ReadCSV.ReadFromCSV(path);
-				      elements = ToCSV.CreateData(details);
-				      ToKML.CreateKML(elements);
-				      for(int i=0; i<elements.size(); i++) {
-							melements.add(elements.get(i));
-						}
+				if(melements.isEmpty()) {
+					System.out.println("There is no elements.");
+				}
+				else {
+				      ToKML.CreateKML(melements);
 				}
 			}
 		});
@@ -120,12 +166,23 @@ public class Graphics extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(melements.size() > 0) {
 					    try {
-					    	ArrayList<Data> elements;					    	
-							elements = ToCSV.sortBy(melements, "time");
-							ToCSV.CreateCSV(elements, "Wifi time sort");
+					    	ArrayList<Data> elements = (ArrayList<Data>) melements.clone();	
+					    	if(textField_3.getText().isEmpty()  == true && textField_4.getText() .isEmpty() == true) { 
+							    elements = ToCSV.sortBy(elements, "time");
+							    ToCSV.CreateCSV(elements, "Wifi time sort");
+					    	}
+					    	else {
+					    		try {
+					    		elements = ToCSV.Filter(elements, "time", textField_4.getText(), textField_3.getText());
+					    		elements = ToCSV.sortBy(elements, "time");
+							    ToCSV.CreateCSV(elements, "Wifi time sort by filter");
+					    		}
+				    		    catch (ParseException e1) {
+								System.out.println("There is no elements with this value.");
+							    }
+					    	}
 						} catch (ParseException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
+							System.out.println("There is no elements with this value.");
 						}
 				}
 				else {
@@ -139,11 +196,23 @@ public class Graphics extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(melements.size() > 0) {
 				    try {
-						melements = ToCSV.sortBy(melements, "lon");
-						ToCSV.CreateCSV(melements, "Wifi lon sort");
+				    	ArrayList<Data> elements = (ArrayList<Data>) melements.clone();	
+				    	if(textField_3.getText().isEmpty()  == true && textField_4.getText() .isEmpty() == true) { 
+						    elements = ToCSV.sortBy(elements, "lon");
+						    ToCSV.CreateCSV(elements, "Wifi lon sort");
+				    	}
+				    	else {
+				    		try {
+				    		elements = ToCSV.Filter(elements, "lon", textField_4.getText(), textField_3.getText());
+				    		elements = ToCSV.sortBy(elements, "lon");
+						    ToCSV.CreateCSV(elements, "Wifi lon sort by filter");;
+				    		}
+			    		    catch (ParseException e1) {
+							System.out.println("There is no elements with this value.");
+						    }
+				    	}
 					} catch (ParseException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+						System.out.println("There is no elements with this value.");
 					}
 			   }
 				else {
@@ -157,11 +226,23 @@ public class Graphics extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(melements.size() > 0) {
 				    try {
-						melements = ToCSV.sortBy(melements, "lat");
-						ToCSV.CreateCSV(melements, "Wifi lat sort");
+				    	ArrayList<Data> elements = (ArrayList<Data>) melements.clone();		
+				    	if(textField_3.getText().isEmpty()  == true && textField_4.getText() .isEmpty() == true) {  
+						    elements = ToCSV.sortBy(elements, "lat");
+						    ToCSV.CreateCSV(elements, "Wifi lat sort");
+				    	}
+				    	else {
+				    		try {
+				    		elements = ToCSV.Filter(elements, "lat", textField_4.getText(), textField_3.getText());
+				    		elements = ToCSV.sortBy(elements, "lat");
+						    ToCSV.CreateCSV(elements, "Wifi lat sort by filter");
+				    		}
+			    		    catch (ParseException e1) {
+							System.out.println("There is no elements with this value.");
+						    } 
+				    	}
 					} catch (ParseException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+						System.out.println("There is no elements with this value.");
 					}
 			   }
 				else {
@@ -175,11 +256,23 @@ public class Graphics extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(melements.size() > 0) {
 				    try {
-						melements = ToCSV.sortBy(melements, "alt");
-						ToCSV.CreateCSV(melements, "Wifi alt sort");
+				    	ArrayList<Data> elements = (ArrayList<Data>) melements.clone();	
+				    	if(textField_3.getText().isEmpty()  == true && textField_4.getText() .isEmpty() == true) { 
+						    elements = ToCSV.sortBy(elements, "alt");
+						    ToCSV.CreateCSV(elements, "Wifi alt sort");
+				    	}
+				    	else {
+				    		try {
+				    		elements = ToCSV.Filter(elements, "alt", textField_4.getText(), textField_3.getText());
+				    		elements = ToCSV.sortBy(elements, "alt");
+						    ToCSV.CreateCSV(elements, "Wifi alt sort by filter");
+				    		}
+			    		    catch (ParseException e1) {
+							System.out.println("There is no elements with this value.");
+						    }
+				    	}
 					} catch (ParseException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+						System.out.println("There is no elements with this value.");
 					}
 			    }
 				else {
@@ -206,9 +299,18 @@ public class Graphics extends JFrame {
 			    
 			    
 			    String[] details;
-			    details = ReadCSV.ReadFromCSV(textField.getText());
-			    ToCSV.AddData(melements, details);
-			    System.out.println("Data added!\n");
+			    try {
+			       details = ReadCSV.ReadFromCSV(chooser.getSelectedFile().toString());
+			       ToCSV.AddData(melements, details);
+			       System.out.println("Data added!\n");
+			       Database.CreateDatabase(melements);
+			       String s = Integer.toString((Cal.Wifinumber(melements)));
+				     textField_1.setText(s);
+				     textField_2.setText(Integer.toString(melements.size()));
+			    }
+			    catch (Exception e1) {
+			    	System.out.println("Path is not good.");
+			    }
 			}
 		});
 		
@@ -218,7 +320,8 @@ public class Graphics extends JFrame {
 		btnAlgo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(melements.size() > 0) {
-				   ToCSV.CreateWCenterCSV(melements);
+					ArrayList<Data> elements = (ArrayList<Data>) melements.clone();	
+				   ToCSV.CreateWCenterCSV(elements);
 				}
 				else {
 					System.out.println("No elements \n");
@@ -230,7 +333,8 @@ public class Graphics extends JFrame {
 		btnAlgo_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(melements.size() > 0) {
-				    Algo2.Algo2(melements); 
+					ArrayList<Data> elements = (ArrayList<Data>) melements.clone();	
+				    Algo2.Algo2(elements); 
 				}
 				else {
 					System.out.println("No elements \n");
@@ -243,29 +347,96 @@ public class Graphics extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(melements.size() > 0) {
 				    try {
-						melements = ToCSV.sortBy(melements, "signal");
-						ToCSV.CreateCSV(melements, "Wifi time sort");
+				    	ArrayList<Data> elements = (ArrayList<Data>) melements.clone();	
+				    	if(textField_3.getText().isEmpty() == true && textField_4.getText().isEmpty() == true) { 
+						    elements = ToCSV.sortBy(elements, "signal");
+						    ToCSV.CreateCSV(elements, "Wifi signal sort");
+				    	}
+				    	else {
+				    		try {
+				    		elements = ToCSV.Filter(elements, "signal", textField_4.getText(), textField_3.getText());
+				    		elements = ToCSV.sortBy(elements, "signal");
+						    ToCSV.CreateCSV(elements, "Wifi signal sort by filter");
+				    		}
+				    		catch (ParseException e1) {
+								System.out.println("There is no elements with this value.");
+							}
+				    	}
 					} catch (ParseException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+						System.out.println("There is no elements with this value.");
 					}
 			}
 			}
 		});
+		
+		JLabel lblNewLabel = new JLabel("Statistics:");
+		
+		JLabel lblWifiNumber = new JLabel("Wifi number");
+		
+		JLabel lblTotalSamples = new JLabel("Total samples");
+		
+		JLabel lblFilter = new JLabel("Filter:");
+		
+		JLabel lblMinimum = new JLabel("Minimum");
+		
+		JLabel lblMaximum = new JLabel("Maximum");
+		
+		JButton btnDeleteAll = new JButton("Delete All");
+		btnDeleteAll.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				melements.clear();
+				    try {
+				    	System.out.println(Datapath);
+						Files.delete(Datapath);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			         textField_1.setText("0");
+			         textField_2.setText("0");
+				System.out.println("All samples removed.");
+			}
+		});
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		
+		JButton btnByDevice = new JButton("By device");
+		btnByDevice.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String device = textField_5.getText();
+				if(device.isEmpty() == false ) {
+				    ArrayList<Data> elements = (ArrayList<Data>) melements.clone();
+				    for(int i=0; i<elements.size(); i++) {
+					   if(elements.get(i).GetID().equals(device) == false) {
+						elements.remove(i);
+					   }
+				    }
+				    if(elements.size() > 0) {
+				       ToCSV.CreateCSV(elements, "Wifi device filtering");
+				    }
+				    else {
+					   System.out.println("Device not found!\n");
+				    }
+				}
+				else {
+					System.out.println("Empty field");
+				}
+;			}
+		});
+		
+		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnAddData))
-					.addGap(5)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(btnAlgo)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(btnAlgo_1))
-						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(textField, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnAddData)
+								.addComponent(btnDeleteAll))
+							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addComponent(btnChooseWiggle)
@@ -273,22 +444,59 @@ public class Graphics extends JFrame {
 									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
 										.addComponent(button, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 										.addComponent(btnNewButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-								.addComponent(lblAlgorithms))
-							.addPreferredGap(ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+										.addComponent(btnAlgo)
+										.addComponent(lblAlgorithms))
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(btnAlgo_1))))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(lblFilter))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addContainerGap()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(Alignment.TRAILING, gl_contentPane.createParallelGroup(Alignment.LEADING)
-									.addComponent(lblSorting)
-									.addGroup(gl_contentPane.createSequentialGroup()
-										.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-											.addComponent(btnTime)
-											.addComponent(btnLat))
-										.addPreferredGap(ComponentPlacement.RELATED)
-										.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-											.addComponent(btnAlt)
-											.addComponent(btnLon))))
-								.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-									.addComponent(btnSignal)
-									.addGap(20)))))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblMaximum)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblMinimum)
+									.addPreferredGap(ComponentPlacement.UNRELATED)
+									.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+							.addGap(37)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(btnByDevice)
+								.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+					.addPreferredGap(ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+							.addComponent(lblSorting)
+							.addGroup(gl_contentPane.createSequentialGroup()
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+									.addComponent(btnTime)
+									.addComponent(btnLat))
+								.addPreferredGap(ComponentPlacement.RELATED)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+									.addComponent(btnLon)
+									.addComponent(btnAlt))))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+								.addComponent(btnSignal)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblNewLabel)
+									.addGap(9))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblWifiNumber)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(ComponentPlacement.RELATED))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblTotalSamples)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(ComponentPlacement.RELATED)))
+							.addGap(20)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
@@ -306,25 +514,46 @@ public class Graphics extends JFrame {
 									.addComponent(btnChooseWiggle)
 									.addComponent(btnTime)
 									.addComponent(btnLon)))))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(button)
-						.addComponent(btnLat)
-						.addComponent(btnAlt))
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(18)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(btnAddData)
-								.addComponent(lblAlgorithms))
+								.addComponent(button)
+								.addComponent(btnLat)
+								.addComponent(btnAlt))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(btnSignal)
+							.addGap(28)
+							.addComponent(lblNewLabel))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnAddData)
+							.addGap(21)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(lblAlgorithms)
+								.addComponent(btnDeleteAll))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(btnAlgo)
-								.addComponent(btnAlgo_1)))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(btnSignal)))
-					.addContainerGap(97, Short.MAX_VALUE))
+								.addComponent(btnAlgo_1))))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblWifiNumber)
+						.addComponent(lblFilter))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblTotalSamples)
+						.addComponent(lblMinimum)
+						.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnByDevice))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblMaximum)
+						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}

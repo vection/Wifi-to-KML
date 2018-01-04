@@ -33,7 +33,7 @@ public class ToCSV
 	public static ArrayList<Data> CreateData(String[] details) {
 		ArrayList<Data> elements = new ArrayList<>();
 		Date time = new Date();
-		String[] sp,sp1,sp2,sp3,sp4,sp5,sp6,sp7;
+		String[] sp,sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8;
 	 	sp = details[0].split(" ");
 	 	sp1 = details[1].split(" ");
 	    sp2 = details[2].split(" ");
@@ -83,8 +83,10 @@ public class ToCSV
 			csvOutput.endRecord();
 		    for(int i=1; i<elements.size(); i++) // splitting the whole string and writing the details in specific order.
 		    {
-		          csvOutput.write(elements.get(i).getTime().toString());
-		          csvOutput.write("");
+		    	  DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm"); 
+		    	  String time = df.format(elements.get(i).getTime());
+		          csvOutput.write(time);
+		          csvOutput.write(elements.get(i).GetID());
 		          csvOutput.write(elements.get(i).getLat());
 		          csvOutput.write(elements.get(i).getLon());
 		          csvOutput.write(elements.get(i).getAlt());
@@ -162,11 +164,9 @@ public class ToCSV
  		    	if(id > -1) {
  		          asorted.add(elements.get(id));
  		    	}
- 		    	dsorted.remove(i);
  		    	elements.remove(id);
 		    }
 		}
-		System.out.println(asorted.size());
 		return asorted;
 	}
 	/**
@@ -178,42 +178,43 @@ public class ToCSV
 	 */
 	public static ArrayList<Data> Sort(ArrayList<Data> elements, double[] arr, String s) {
 		ArrayList<Data> temp = new ArrayList<>();
+		ArrayList<Data> helper = elements;
 		if(s.equals("alt")) {
 		    for(int i =0; i<arr.length; i++) {
-			    for(int j =0; j<elements.size(); j++) {
-				    if(Double.parseDouble(elements.get(j).getAlt()) == arr[i]) {
-					   temp.add(elements.get(j));
-					  elements.remove(elements.get(j));
+			    for(int j =0; j<helper.size(); j++) {
+				    if(Double.parseDouble(helper.get(j).getAlt()) == arr[i]) {
+					   temp.add(helper.get(j));
+					  helper.remove(helper.get(j));
 				    }
 			    }
 		    }
 		}
 		else if(s.equals("signal")) {
 		    for(int i =0; i<arr.length; i++) {
-			    for(int j =0; j<elements.size(); j++) {
-				    if(Double.parseDouble(elements.get(j).getSignal()) == arr[i]) {
-					   temp.add(elements.get(j));
-					  elements.remove(elements.get(j));
+			    for(int j =0; j<helper.size(); j++) {
+				    if(Double.parseDouble(helper.get(j).getSignal()) == arr[i]) {
+					   temp.add(helper.get(j));
+					   helper.remove(helper.get(j));
 				    }
 			    }
 		    }
 		}
 		else if(s.equals("lat")) {
 		    for(int i =0; i<arr.length; i++) {
-			    for(int j =0; j<elements.size(); j++) {
-				    if(Double.parseDouble(elements.get(j).getLat()) == arr[i]) {
-					   temp.add(elements.get(j));
-					   elements.remove(elements.get(j));
+			    for(int j =0; j<helper.size(); j++) {
+				    if(Double.parseDouble(helper.get(j).getLat()) == arr[i]) {
+					   temp.add(helper.get(j));
+					   helper.remove(helper.get(j));
 				    }
 			    }
 		    }
 		}
 		else if(s.equals("lon")) {
 		    for(int i =0; i<arr.length; i++) {
-			    for(int j =0; j<elements.size(); j++) {
-				    if(Double.parseDouble(elements.get(j).getLon()) == arr[i]) {
-					   temp.add(elements.get(j));
-					   elements.remove(elements.get(j));
+			    for(int j =0; j<helper.size(); j++) {
+				    if(Double.parseDouble(helper.get(j).getLon()) == arr[i]) {
+					   temp.add(helper.get(j));
+					   helper.remove(helper.get(j));
 				    }
 			    }
 		    }
@@ -227,15 +228,12 @@ public class ToCSV
 	 */
 	public static Date SetDate(String date) 
 	{
-        // This object can interpret strings representing dates in the format MM/dd/yyyy
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm"); 
 
-        // Convert from String to Date
         Date startDate = null;
 		try {
 			startDate = df.parse(date);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         return startDate;
@@ -267,7 +265,6 @@ public class ToCSV
 	      	Data p = new Data(sp3[i], time, sp4[i], sp5[i], sp7[i], sp1[i], sp2[i], sp6[i], ID);
 	 	    elements.add(p);
         }
-	    ToCSV.CreateCSV(elements, "Wifi log");
 	}
 	/**
 	 * Create Weight CSV file - Algo1.
@@ -304,7 +301,9 @@ public class ToCSV
 		    	x = Double.toString(wpoint.x);
 		    	y = Double.toString(wpoint.y);
 		    	z = Double.toString(wpoint.z);
-		          csvOutput.write(elements.get(i).getTime().toString());
+		    	DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm"); 
+		    	  String time = df.format(elements.get(i).getTime());
+		          csvOutput.write(time);
 		          csvOutput.write("");
 		          csvOutput.write(y);
 		          csvOutput.write(x);
@@ -325,57 +324,6 @@ public class ToCSV
 			} 
 	}
      /**
-      * Function that creates sortedCSV by time.
-      * @param elements
-      * @param date
-      */
-     public static void CreateSortedCSV(ArrayList<Data> elements, ArrayList<Date> date) {
- 
- 		File file = new File("TimeFilteredLog.csv");
- 		String path = file.getAbsolutePath();
- 		try 
- 		  {
- 			CsvWriter csvOutput = new CsvWriter(new FileWriter(file, true), ',');
- 			csvOutput.write("Time");
- 			csvOutput.write("ID");
- 			csvOutput.write("Lat");
- 			csvOutput.write("Lon");
-    		    csvOutput.write("Alt");
- 			csvOutput.write("SSID");
- 			csvOutput.write("MAC");
- 			csvOutput.write("Ferquency");
- 			csvOutput.write("Signal");
- 			csvOutput.endRecord();
- 			csvOutput.write("");
- 			csvOutput.endRecord();
- 		    for(int i=0; i<date.size(); i++) // splitting the whole string and writing the details in specific order.
- 		    {
- 		    	int id = FindID(elements,date.get(i));
- 		    	if(id > -1) {
- 		          csvOutput.write(elements.get(id).getTime().toString());
- 		          csvOutput.write("");
- 		          csvOutput.write(elements.get(id).getLat());
- 		          csvOutput.write(elements.get(id).getLon());
- 		          csvOutput.write(elements.get(id).getAlt());
- 		          csvOutput.write(elements.get(id).getSSID());
- 		          csvOutput.write(elements.get(id).getMAC());
- 		          csvOutput.write(elements.get(id).getFrequency());
- 		          csvOutput.write(elements.get(id).getSignal());
- 		          csvOutput.endRecord();
- 		    	}
- 		    	date.remove(i);
- 		    	elements.remove(id);
- 		    }
- 		    
- 		    csvOutput.close();
- 		    System.out.println("Time filtered CSV file created here -  "+path);
- 		  }
- 		  catch (IOException e) 
- 			{
- 				e.printStackTrace();
- 			} 
- 	}
-     /**
       * Helping function to get ID of object.
       * @param elements Arraylist of Data.
       * @param s Data object
@@ -384,10 +332,97 @@ public class ToCSV
      public static int FindID(ArrayList<Data> elements, Date s) {
     		int id=-1;
     	 for(int i=0; i<elements.size(); i++) {
-    			if(s.equals(elements.get(i).getTime())) {
+    			if(s == elements.get(i).getTime()) {
     				id = i;
     			}
     		}
 			return id;
      }
+     /**
+      * Filter funtion.
+      * @param elements - samples
+      * @param sortype - lon,lat,alt,signal, time
+      * @param min - min value
+      * @param max - max value
+      * @return
+      */
+    public static ArrayList<Data> Filter(ArrayList<Data> elements, String sortype ,String min, String max) {
+    	ArrayList<Data> newelements = new ArrayList<>();
+    	if(!elements.isEmpty()) {
+    	  if(sortype.equals("lon")) {
+    		double lon,min1, max1;
+    		min1 = Double.parseDouble(min);
+    		max1 = Double.parseDouble(max);
+    	      for(int i=0; i<elements.size(); i++) {
+    	    	  Data temp = elements.get(i);
+    	    	  lon = Double.parseDouble(temp.getLon());
+    	    	  if(lon >= min1 && lon <= max1) {
+    	    		newelements.add(elements.get(i));
+    	    	  }
+    	    		  
+    	       }
+    		
+    	  }
+    	  else if(sortype.equals("alt")) {
+    		double alt,min1, max1;
+    		min1 = Double.parseDouble(min);
+    		max1 = Double.parseDouble(max);
+    	      for(int i=0; i<elements.size(); i++) {
+    	    	  Data temp = elements.get(i);
+    	    	  alt = Double.parseDouble(temp.getAlt());
+    	    	  if(alt >= min1 && alt <= max1) {
+    	    		newelements.add(elements.get(i));
+    	    	  }
+    	    		  
+    	       }
+    		
+    	  }
+    	  else if(sortype.equals("signal")) {
+    		int sig,min1, max1;
+    		min1 = Integer.parseInt(min);
+    		max1 = Integer.parseInt(max);
+    	      for(int i=0; i<elements.size(); i++) {
+    	    	  Data temp = elements.get(i);
+    	    	  sig = Integer.parseInt(temp.getSignal());
+    	    	  if(sig >= min1 && sig <= max1) {
+    	    		newelements.add(elements.get(i));
+    	    	  }
+    	    		  
+    	       }
+    		
+    	  }
+    	  else if(sortype.equals("lat")) {
+    		double lat,min1, max1;
+    		min1 = Double.parseDouble(min);
+    		max1 = Double.parseDouble(max);
+    	      for(int i=0; i<elements.size(); i++) {
+    	    	  Data temp = elements.get(i);
+    	    	  lat = Double.parseDouble(temp.getLat());
+    	    	  if(lat >= min1 && lat <= max1) {
+    	    		newelements.add(elements.get(i));
+    	    	  }
+    	    		  
+    	       }
+    		
+    	  }
+    	  else if(sortype.equals("time")) {
+    		long time,min1, max1;
+    		min1 = Long.parseLong(min);
+    		max1 = Long.parseLong(max);
+    	      for(int i=0; i<elements.size(); i++) {
+    	    	  Data temp = elements.get(i);
+    	    	  time = temp.getlTime();
+    	    	  if(time >= min1 && time <= max1) {
+    	    		newelements.add(elements.get(i));
+    	    	  }
+    	    		  
+    	       }
+    		
+    	}
+    	}
+    	else {
+    		System.out.println("There is no elements!");
+    	}
+    	return newelements;
+    }
 }
