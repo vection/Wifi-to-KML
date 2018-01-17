@@ -1,0 +1,1565 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <Placemark>
+            <name>medina</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:41:00 IST 2017
+ Wifi: medina
+ Signal: -93
+ MAC: 8c:59:c3:e9:8e:02
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:41:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647198,31.89741415,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqFree</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:41:00 IST 2017
+ Wifi: BezeqFree
+ Signal: -90
+ MAC: 06:ae:db:38:99:3d
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:41:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647175,31.89741399,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Harazi</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: Harazi
+ Signal: -29
+ MAC: e0:ce:c3:8a:d4:45
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647162,31.89741338,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>HaikuAndi</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: HaikuAndi
+ Signal: -79
+ MAC: 00:e0:20:6b:23:04
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647162,31.89741338,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>benraf1</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: benraf1
+ Signal: -93
+ MAC: c8:be:19:0e:b5:42
+ Frequency: 3</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647157,31.89741332,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>www.cornet.co.il</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: www.cornet.co.il
+ Signal: -88
+ MAC: 00:23:cd:1c:4c:b0
+ Frequency: 5</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647154,31.89741317,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Claude</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: Claude
+ Signal: -92
+ MAC: c4:12:f5:fd:53:c2
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647121,31.89741277,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bezeq-NGN_CCB255E81C7F</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: Bezeq-NGN_CCB255E81C7F
+ Signal: -90
+ MAC: cc:b2:55:e8:1c:80
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647065,31.89741188,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>vered2.4</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: vered2.4
+ Signal: -91
+ MAC: 74:da:3b:81:69:bb
+ Frequency: 10</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.8164703,31.89741141,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>vered2.4_2EX</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:42:00 IST 2017
+ Wifi: vered2.4_2EX
+ Signal: -93
+ MAC: 74:da:38:81:69:ba
+ Frequency: 10</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:42:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81647017,31.89741125,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Rotman2</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:43:00 IST 2017
+ Wifi: Rotman2
+ Signal: -89
+ MAC: 80:1f:02:5d:a2:50
+ Frequency: 10</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646984,31.89740996,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>david</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:43:00 IST 2017
+ Wifi: david
+ Signal: -85
+ MAC: 8c:59:c3:e8:d1:1b
+ Frequency: 52</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646988,31.89740993,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqFree</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:43:00 IST 2017
+ Wifi: BezeqFree
+ Signal: -90
+ MAC: 52:12:f5:fd:53:c3
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646977,31.89740965,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bamberger_Net</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:45:00 IST 2017
+ Wifi: Bamberger_Net
+ Signal: -91
+ MAC: ac:f1:df:9e:cd:41
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:45:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646857,31.89740525,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>NIPPON_7069</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:46:00 IST 2017
+ Wifi: NIPPON_7069
+ Signal: -80
+ MAC: 08:97:58:33:5c:aa
+ Frequency: 3</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:46:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.8164688,31.89740514,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>HOTBOX-ED6A</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:46:00 IST 2017
+ Wifi: HOTBOX-ED6A
+ Signal: -91
+ MAC: 7c:03:4c:ff:3e:48
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:46:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646877,31.897405,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ortal123</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:47:00 IST 2017
+ Wifi: ortal123
+ Signal: -93
+ MAC: 14:ae:db:a2:e3:0d
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:47:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646858,31.89740306,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>midr-cardvr-v1_midevc5fc</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:47:00 IST 2017
+ Wifi: midr-cardvr-v1_midevc5fc
+ Signal: -89
+ MAC: 44:2c:05:ce:c5:fc
+ Frequency: 9</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:47:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646857,31.89740305,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Haymon2</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:48:00 IST 2017
+ Wifi: Haymon2
+ Signal: -94
+ MAC: 14:ae:db:c8:11:7d
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:48:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646837,31.89740153,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqFree</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:49:00 IST 2017
+ Wifi: BezeqFree
+ Signal: -93
+ MAC: 06:ae:db:c8:11:7d
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:49:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646813,31.89740032,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bamberger_Net</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:49:00 IST 2017
+ Wifi: Bamberger_Net
+ Signal: -86
+ MAC: ac:f1:df:9e:cd:41
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:49:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646809,31.8973998,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>G4_3529</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:52:00 IST 2017
+ Wifi: G4_3529
+ Signal: -84
+ MAC: 5c:70:a3:8b:ea:5c
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:52:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646565,31.89739158,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>AndroidAP</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:56:00 IST 2017
+ Wifi: AndroidAP
+ Signal: -81
+ MAC: 98:86:b1:05:18:dd
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:56:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646321,31.89738816,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Xperia_XA_e6be</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:57:00 IST 2017
+ Wifi: Xperia_XA_e6be
+ Signal: -90
+ MAC: 9e:5c:f9:56:d7:8f
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:57:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646223,31.89738757,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>MEIZU_M3s</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 18:59:00 IST 2017
+ Wifi: MEIZU_M3s
+ Signal: -84
+ MAC: 1e:cd:e5:5c:23:f6
+ Frequency: 10</description>
+            <TimeStamp>
+                <when>Sun Dec 10 18:59:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646175,31.8973863,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Tuvia</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:01:00 IST 2017
+ Wifi: Tuvia
+ Signal: -83
+ MAC: ac:f1:df:9e:fa:61
+ Frequency: 13</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:01:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646057,31.89738499,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Claude</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:01:00 IST 2017
+ Wifi: Claude
+ Signal: -87
+ MAC: c4:12:f5:fd:53:c2
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:01:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646057,31.89738499,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Harazi</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Harazi
+ Signal: -46
+ MAC: e0:ce:c3:8a:d4:45
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646034,31.89738423,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>arye52</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: arye52
+ Signal: -87
+ MAC: 14:ae:db:3c:7c:d2
+ Frequency: 5</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646034,31.89738423,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>GAL</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: GAL
+ Signal: -80
+ MAC: 84:26:15:e9:95:a3
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646034,31.89738423,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Tuvia</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Tuvia
+ Signal: -86
+ MAC: ac:f1:df:9e:fa:61
+ Frequency: 13</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646034,31.89738423,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqNGN_008702_2.4GHz_1</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: BezeqNGN_008702_2.4GHz_1
+ Signal: -79
+ MAC: f8:e9:03:11:bc:09
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646034,31.89738423,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>GOLANT</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: GOLANT
+ Signal: -113
+ MAC: 42502_732_3859743
+ Frequency: 0</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646034,31.89738423,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>david</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: david
+ Signal: -92
+ MAC: 8c:59:c3:e8:d1:1b
+ Frequency: 52</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646042,31.89738428,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Yarden</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Yarden
+ Signal: -89
+ MAC: c0:ac:54:f7:50:5a
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646042,31.89738428,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>idolior_5GExt</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: idolior_5GExt
+ Signal: -93
+ MAC: 64:d9:54:e5:68:e2
+ Frequency: 44</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646042,31.89738428,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqFree</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: BezeqFree
+ Signal: -85
+ MAC: 14:af:db:3c:7c:d2
+ Frequency: 5</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646042,31.89738428,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>hopfeld</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: hopfeld
+ Signal: -91
+ MAC: 14:ae:db:aa:74:72
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646042,31.89738428,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Harazi</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Harazi
+ Signal: -39
+ MAC: e0:ce:c3:8a:d4:45
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646046,31.89738432,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bezeq-NGN_E817A7</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Bezeq-NGN_E817A7
+ Signal: -89
+ MAC: cc:b2:55:e8:17:a8
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646046,31.89738432,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bezeq-NGN_E817A7</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Bezeq-NGN_E817A7
+ Signal: -80
+ MAC: cc:b2:55:e8:17:a8
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646043,31.89738432,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>idolior_2GExt</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: idolior_2GExt
+ Signal: -82
+ MAC: 64:d9:54:e5:68:e3
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646043,31.89738432,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Giovanna123</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Giovanna123
+ Signal: -86
+ MAC: 20:0c:c8:11:5b:ec
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646043,31.89738432,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>porat</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: porat
+ Signal: -87
+ MAC: e0:ce:c3:8b:a6:29
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646043,31.89738432,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Nastya</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Nastya
+ Signal: -87
+ MAC: 7c:b7:33:2b:a7:c6
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.8164605,31.89738435,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>vilensky_guest</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: vilensky_guest
+ Signal: -90
+ MAC: ee:94:f6:87:a8:31
+ Frequency: 13</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646051,31.8973843,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>HaikuAndi</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: HaikuAndi
+ Signal: -87
+ MAC: 00:e0:20:6b:23:04
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646051,31.8973843,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>NIPPON_2329</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: NIPPON_2329
+ Signal: -80
+ MAC: 08:97:58:33:d0:56
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646064,31.89738438,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Virus</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: Virus
+ Signal: -84
+ MAC: 74:d0:2b:5e:8b:e8
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646064,31.89738438,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>david</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:02:00 IST 2017
+ Wifi: david
+ Signal: -82
+ MAC: 8c:59:c3:e8:d1:1a
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:02:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.8164606,31.89738431,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Haimon2</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:03:00 IST 2017
+ Wifi: Haimon2
+ Signal: -86
+ MAC: 74:da:38:81:66:bd
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:03:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646067,31.89738423,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Yarden</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:03:00 IST 2017
+ Wifi: Yarden
+ Signal: -83
+ MAC: c0:ac:54:f7:50:5a
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:03:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646069,31.89738417,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Nastya</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:03:00 IST 2017
+ Wifi: Nastya
+ Signal: -82
+ MAC: 7c:b7:33:2b:a7:c6
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:03:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646063,31.89738387,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>HotSpot-B40016A2</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:03:00 IST 2017
+ Wifi: HotSpot-B40016A2
+ Signal: -82
+ MAC: 02:c6:b4:00:16:a2
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:03:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646063,31.89738387,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Haimon2</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:03:00 IST 2017
+ Wifi: Haimon2
+ Signal: -81
+ MAC: 74:da:38:81:66:bd
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:03:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646057,31.89738359,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>sod-moriah-Adin_2.4</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:04:00 IST 2017
+ Wifi: sod-moriah-Adin_2.4
+ Signal: -92
+ MAC: f8:e9:03:10:f1:89
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:04:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646055,31.89738316,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>riva</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:04:00 IST 2017
+ Wifi: riva
+ Signal: -90
+ MAC: 14:ae:db:52:41:85
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:04:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646054,31.89738287,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bezeq_18037</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:04:00 IST 2017
+ Wifi: Bezeq_18037
+ Signal: -83
+ MAC: 30:46:9a:2c:f5:2c
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:04:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81646046,31.8973827,103.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Tuvia</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Tuvia
+ Signal: -70
+ MAC: ac:f1:df:9e:fa:61
+ Frequency: 13</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81638882,31.89734849,104.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>idolior_5GExt</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: idolior_5GExt
+ Signal: -73
+ MAC: 64:d9:54:e5:68:e2
+ Frequency: 44</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81638882,31.89734849,104.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Oxana25</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Oxana25
+ Signal: -83
+ MAC: 14:ae:db:38:99:3d
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81638882,31.89734849,104.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>DIRECT-1E-HPDeskJet3830series</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: DIRECT-1E-HPDeskJet3830series
+ Signal: -83
+ MAC: 40:b0:34:60:e6:1f
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81638882,31.89734849,104.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>DIRECT-3F-HPDeskJet3830series</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: DIRECT-3F-HPDeskJet3830series
+ Signal: -84
+ MAC: a0:8c:fd:01:eb:bb
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81638882,31.89734849,104.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Xiaomi_C4D7_3B28</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Xiaomi_C4D7_3B28
+ Signal: -87
+ MAC: 34:ce:00:4a:c4:d8
+ Frequency: 4</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81638882,31.89734849,104.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqFree</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: BezeqFree
+ Signal: -71
+ MAC: 14:af:db:3c:7c:d2
+ Frequency: 5</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>arye52</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: arye52
+ Signal: -73
+ MAC: 14:ae:db:3c:7c:d2
+ Frequency: 5</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Nastya</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Nastya
+ Signal: -74
+ MAC: 7c:b7:33:2b:a7:c6
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>medina</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: medina
+ Signal: -84
+ MAC: 8c:59:c3:e9:8e:02
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ana_5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: ana_5
+ Signal: -88
+ MAC: 6c:b0:ce:38:4e:4d
+ Frequency: 40</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>medina</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: medina
+ Signal: -90
+ MAC: 8c:59:c3:e9:8e:03
+ Frequency: 52</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>arye52_5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: arye52_5
+ Signal: -91
+ MAC: 14:ae:db:3c:7c:d5
+ Frequency: 48</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>zenit</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: zenit
+ Signal: -85
+ MAC: 6c:b0:ce:35:a9:a0
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>HOTFiber</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: HOTFiber
+ Signal: -86
+ MAC: e0:ce:c3:f0:08:8a
+ Frequency: 12</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>zenit_5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: zenit_5
+ Signal: -92
+ MAC: 6c:b0:ce:35:a9:a1
+ Frequency: 60</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BEZEQINT-0611</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: BEZEQINT-0611
+ Signal: -90
+ MAC: 14:ae:db:56:06:15
+ Frequency: 11</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bezeq-B</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Bezeq-B
+ Signal: -86
+ MAC: 9c:d6:43:21:d3:ef
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639472,31.89737074,100.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>edimaxEXT.setupa0</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: edimaxEXT.setupa0
+ Signal: -77
+ MAC: 74:da:38:83:03:a0
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Xiaomi_C4D7_3B28</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Xiaomi_C4D7_3B28
+ Signal: -77
+ MAC: 34:ce:00:4a:c4:d8
+ Frequency: 4</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Nastya</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Nastya
+ Signal: -69
+ MAC: 7c:b7:33:2b:a7:c6
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>medina</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: medina
+ Signal: -75
+ MAC: 8c:59:c3:e9:8e:02
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>medina</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: medina
+ Signal: -72
+ MAC: 8c:59:c3:e9:8e:03
+ Frequency: 52</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>arye52_5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: arye52_5
+ Signal: -86
+ MAC: 14:ae:db:3c:7c:d5
+ Frequency: 48</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>zenit_5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: zenit_5
+ Signal: -87
+ MAC: 6c:b0:ce:35:a9:a1
+ Frequency: 60</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bezeq-B</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Bezeq-B
+ Signal: -79
+ MAC: 9c:d6:43:21:d3:ef
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>idolior_2GExt</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: idolior_2GExt
+ Signal: -68
+ MAC: 64:d9:54:e5:68:e3
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ortal123</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Ortal123
+ Signal: -75
+ MAC: 40:65:a3:29:81:73
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>HOTFiber-5B60</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: HOTFiber-5B60
+ Signal: -76
+ MAC: d0:84:b0:ff:53:09
+ Frequency: 10</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>DIRECT-48-HPDeskJet4670series</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: DIRECT-48-HPDeskJet4670series
+ Signal: -80
+ MAC: 70:5a:0f:b2:b5:49
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>idolior</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: idolior
+ Signal: -81
+ MAC: 74:88:8b:fd:6d:08
+ Frequency: 1</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Daniel_Zohar</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Daniel_Zohar
+ Signal: -81
+ MAC: a0:ab:1b:55:6f:98
+ Frequency: 4</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>aimog_5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: aimog_5
+ Signal: -85
+ MAC: 10:5a:f7:01:8a:5a
+ Frequency: 52</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>DanArie_5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: DanArie_5
+ Signal: -87
+ MAC: 14:ae:db:ca:7e:dd
+ Frequency: 48</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>soneva5</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: soneva5
+ Signal: -91
+ MAC: 3c:1e:04:08:85:25
+ Frequency: 48</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqNGN_007020_5GHz_1</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: BezeqNGN_007020_5GHz_1
+ Signal: -77
+ MAC: 70:62:b8:34:82:2e
+ Frequency: 48</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>BezeqNGN_008702_5GHz_1</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: BezeqNGN_008702_5GHz_1
+ Signal: -82
+ MAC: f8:e9:03:11:bc:0a
+ Frequency: 48</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>edimaxEXT.setup5Ga1</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: edimaxEXT.setup5Ga1
+ Signal: -91
+ MAC: 74:da:38:83:03:a1
+ Frequency: 52</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81639766,31.89738702,95.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>idolior_5GExt</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: idolior_5GExt
+ Signal: -67
+ MAC: 64:d9:54:e5:68:e2
+ Frequency: 44</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>medina</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: medina
+ Signal: -70
+ MAC: 8c:59:c3:e9:8e:02
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Yarden</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Yarden
+ Signal: -73
+ MAC: c0:ac:54:f7:50:5a
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Haimon2</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Haimon2
+ Signal: -74
+ MAC: 74:da:38:81:66:bd
+ Frequency: 2</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>SuperBox2013</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: SuperBox2013
+ Signal: -81
+ MAC: 00:90:8f:2a:6d:34
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Hila2704</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: Hila2704
+ Signal: -82
+ MAC: 14:ae:db:b1:c3:dd
+ Frequency: 6</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>DAP-1325</name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: DAP-1325
+ Signal: -82
+ MAC: 78:32:1b:07:7c:2c
+ Frequency: 9</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name></name>
+            <open>1</open>
+            <description>Time: Sun Dec 10 19:43:00 IST 2017
+ Wifi: 
+ Signal: -77
+ MAC: 62:45:b1:25:c9:04
+ Frequency: 36</description>
+            <TimeStamp>
+                <when>Sun Dec 10 19:43:00 IST 2017</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>34.81643079,31.89735872,86.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
