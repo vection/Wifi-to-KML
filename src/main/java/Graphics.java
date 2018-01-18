@@ -326,10 +326,14 @@ public class Graphics extends JFrame {
 			    
 			    String[] details;
 			    try {
+			    	ArrayList<Data> p = new ArrayList<>();
 			       details = ReadCSV.ReadFromCSV(chooser.getSelectedFile().toString());
-			       ToCSV.AddData(melements, details);
+			       p = ToCSV.CreateData(details);
+			       MYSQL.add(p);
+			       for(int i=0; i<p.size(); i++) {
+			    	   melements.add(p.get(i));
+			       }
 			       System.out.println("Data added!\n");
-			       Database.CreateDatabase(melements);
 			       String s = Integer.toString((Cal.Wifinumber(melements)));
 				     textField_1.setText(s);
 				     textField_2.setText(Integer.toString(melements.size()));
